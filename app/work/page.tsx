@@ -2,11 +2,35 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon } from "@/components/Header";
+import { site } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Selected Work",
-  description: "Explore selected Deumatic product and technology work, presented with clear project context and no unsupported claims.",
+  title: "Software Projects and Product Case Studies",
+  description: "Explore Deumatic software and AI projects, including SupportOS, with product context, architecture, technology choices and real interface captures.",
   alternates: { canonical: "/work" }
+};
+
+const workSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareSourceCode",
+      name: "SupportOS",
+      description: "A human-controlled AI support operations system with approved-source retrieval, operator review and controlled Chatwoot delivery.",
+      codeRepository: "https://github.com/datawithusman/deumatic-supportos",
+      programmingLanguage: ["TypeScript", "Python"],
+      runtimePlatform: "Web",
+      license: "https://opensource.org/license/mit",
+      creator: { "@id": `${site.url}/#organization` }
+    },
+    {
+      "@type": "CreativeWork",
+      name: "Camsort AI",
+      description: "A team-built multimodal surveillance prioritization prototype for identifying camera feeds that may require operator attention.",
+      creator: { "@id": `${site.url}/#organization` },
+      keywords: ["Multimodal AI", "Gemini API", "FastAPI", "Vultr"]
+    }
+  ]
 };
 
 export default function WorkPage() {
@@ -136,6 +160,7 @@ export default function WorkPage() {
         <h2>Let&apos;s understand the decision before choosing the technology.</h2>
         <Link className="button" href="/contact">Start a project <ArrowIcon /></Link>
       </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(workSchema) }} />
     </>
   );
 }

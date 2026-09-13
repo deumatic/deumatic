@@ -4,8 +4,8 @@ import { ArrowIcon } from "@/components/Header";
 import { principles, team } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "Meet Deumatic, a globally oriented digital product and technology team connecting strategy, experience design, software engineering, AI and growth.",
+  title: "About Our Digital Product and Software Team",
+  description: "Learn about Deumatic, a global software and digital product team connecting strategy, UX design, engineering, AI automation, cloud platforms and growth.",
   alternates: { canonical: "/about" }
 };
 
@@ -15,7 +15,7 @@ export default function AboutPage() {
       <section className="page-hero container">
         <span className="section-kicker">About Deumatic</span>
         <h1>Technology is most valuable when the whole product makes sense.</h1>
-        <p>Deumatic brings different disciplines around the same table so product decisions remain connected from first conversation to production release.</p>
+        <p>Established in May 2026, Deumatic brings different disciplines around the same table so product decisions remain connected from first conversation to production release.</p>
       </section>
 
       <section className="about-statement dark-section">

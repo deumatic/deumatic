@@ -1,9 +1,12 @@
 export const site = {
   name: "Deumatic",
-  url: "https://deumatic.com",
+  url: "https://www.deumatic.com",
+  github: "https://github.com/deumatic",
   email: "deumatic.ai@gmail.com",
+  foundingDate: "2026-05",
+  tagline: "Digital products built around real business needs.",
   description:
-    "Deumatic is a global digital product and technology partner for product strategy, experience design, software engineering, AI automation and digital growth."
+    "Deumatic designs and builds web platforms, mobile apps, AI automation and digital products for startups, growing companies and enterprise teams."
 } as const;
 
 export const navItems = [

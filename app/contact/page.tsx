@@ -3,8 +3,8 @@ import { ContactForm } from "@/components/ContactForm";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Start a Project",
-  description: "Contact Deumatic to discuss a digital product, software platform, mobile application, AI automation opportunity or digital growth initiative.",
+  title: "Contact Our Software and Product Team",
+  description: "Contact Deumatic to discuss custom software, a web or mobile application, AI automation, product design, cloud engineering or digital growth.",
   alternates: { canonical: "/contact" }
 };
 

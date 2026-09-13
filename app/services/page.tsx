@@ -1,12 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowIcon } from "@/components/Header";
-import { engagementModels, services } from "@/data/site";
+import { engagementModels, services, site } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Digital Product and Software Services",
-  description: "Explore Deumatic services across product strategy, experience design, web and mobile development, AI automation, cloud platforms and digital growth.",
+  title: "Software Development and AI Automation Services",
+  description: "Explore Deumatic services for custom software, web and mobile applications, AI automation, product strategy, UX design, cloud platforms and digital growth.",
   alternates: { canonical: "/services" }
+};
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Deumatic software and digital product services",
+  itemListElement: services.map((service, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    url: `${site.url}/services#${service.slug}`,
+    item: {
+      "@type": "Service",
+      name: service.title,
+      description: service.description,
+      provider: { "@id": `${site.url}/#organization` },
+      areaServed: "Worldwide"
+    }
+  }))
 };
 
 export default function ServicesPage() {
@@ -58,6 +76,7 @@ export default function ServicesPage() {
         <h2>Bring us the problem. We will help define the next useful step.</h2>
         <Link className="button" href="/contact">Start a conversation <ArrowIcon /></Link>
       </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
     </>
   );
 }
