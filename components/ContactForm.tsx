@@ -49,13 +49,24 @@ export function ContactForm() {
           <span>What do you need?</span>
           <select name="need" defaultValue="">
             <option value="" disabled>Select a service</option>
-            <option>Product strategy and discovery</option>
-            <option>Experience design</option>
-            <option>Web or software development</option>
-            <option>Mobile application development</option>
-            <option>AI and automation</option>
-            <option>Cloud and platform engineering</option>
-            <option>Digital growth</option>
+            <optgroup label="AI and machine learning">
+              <option>AI discovery or feasibility</option>
+              <option>LLM, RAG or AI agent</option>
+              <option>Computer vision</option>
+              <option>Model deployment or optimization</option>
+              <option>AI architecture review</option>
+              <option>Cloud AI infrastructure</option>
+              <option>Research prototype or simulation</option>
+            </optgroup>
+            <optgroup label="Digital products">
+              <option>Product strategy and discovery</option>
+              <option>Experience design</option>
+              <option>Web or software development</option>
+              <option>Mobile application development</option>
+              <option>Cloud and platform engineering</option>
+              <option>Digital growth</option>
+              <option>Other digital product</option>
+            </optgroup>
             <option>Not sure yet</option>
           </select>
         </label>

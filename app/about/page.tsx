@@ -44,7 +44,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="principles-heading">
             <span className="section-kicker">Team</span>
-            <h2>Four perspectives around one product outcome.</h2>
+            <h2>Five perspectives around one product outcome.</h2>
           </div>
           <div className="team-grid">
             {team.map((member, index) => (

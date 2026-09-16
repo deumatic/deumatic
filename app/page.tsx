@@ -74,10 +74,14 @@ export default function HomePage() {
               <Link className="service-row" href={`/services#${service.slug}`} key={service.slug}>
                 <span>{service.number}</span>
                 <h3>{service.title}</h3>
-                <p>{service.short}</p>
+                <p>{service.homeDescription ?? service.short}</p>
                 <span className="service-arrow"><ArrowIcon /></span>
               </Link>
             ))}
+          </div>
+          <div className="ai-capability-callout">
+            <p>From RAG applications and AI agents to computer vision, model deployment and inference optimization, we build AI as part of a complete product and operational system.</p>
+            <Link className="text-link" href="/services/ai-ml-engineering">Explore AI &amp; ML Engineering <ArrowIcon /></Link>
           </div>
         </div>
       </section>
@@ -158,7 +162,7 @@ export default function HomePage() {
           <SectionHeading
             kicker="The team"
             title="Different disciplines. Shared responsibility."
-            intro="A focused team spanning product thinking, experience design, software architecture and intelligent automation."
+            intro="A focused team spanning product strategy, experience design, software architecture, intelligent automation and advanced AI engineering."
           />
           <div className="team-grid">
             {team.map((member, index) => (

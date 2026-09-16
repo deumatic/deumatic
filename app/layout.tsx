@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     "web application development services",
     "mobile app development company",
     "AI automation company",
+    "AI engineering services",
+    "LLM application development",
+    "RAG development",
+    "computer vision development",
     "full stack development services",
     "digital product design",
     "product strategy consulting"
@@ -111,6 +115,12 @@ const structuredData = {
         "Web application development",
         "Mobile application development",
         "Artificial intelligence",
+        "AI agents",
+        "Large language models",
+        "Retrieval-augmented generation",
+        "Computer vision",
+        "Machine-learning deployment",
+        "LLM inference optimization",
         "Workflow automation",
         "Cloud platform engineering",
         "Digital growth"

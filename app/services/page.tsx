@@ -49,6 +49,11 @@ export default function ServicesPage() {
               <ul>
                 {service.capabilities.map((capability) => <li key={capability}>{capability}</li>)}
               </ul>
+              {service.slug === "ai-intelligent-systems" ? (
+                <Link className="text-link service-detail-link" href="/services/ai-ml-engineering">
+                  Explore AI &amp; ML Engineering <ArrowIcon />
+                </Link>
+              ) : null}
             </div>
           </article>
         ))}

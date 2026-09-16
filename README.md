@@ -6,6 +6,8 @@ Production-ready Next.js website for Deumatic, a digital product and technology 
 
 The site presents Deumatic as one connected team across product strategy, experience design, software engineering, mobile applications, AI automation, cloud platforms and digital growth.
 
+The dedicated AI and ML Engineering page groups thirteen evidence-based capabilities across discovery, intelligent product development, deployment, optimization, evaluation and technical advisory.
+
 No location-specific positioning or unsupported business metrics are published. SupportOS is
 presented as a working Deumatic MVP with real interface captures, while Camsort AI is presented as a
 team-built prototype with explicit context.
@@ -47,6 +49,7 @@ node scripts/visual-qa.mjs
 
 - `/`
 - `/services`
+- `/services/ai-ml-engineering`
 - `/work`
 - `/about`
 - `/contact`
