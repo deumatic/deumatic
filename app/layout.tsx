@@ -29,6 +29,10 @@ export const metadata: Metadata = {
     "LLM application development",
     "RAG development",
     "computer vision development",
+    "digital product solutions",
+    "ecommerce development services",
+    "data integration and reporting",
+    "POS setup Saudi Arabia",
     "full stack development services",
     "digital product design",
     "product strategy consulting"
@@ -123,6 +127,9 @@ const structuredData = {
         "LLM inference optimization",
         "Workflow automation",
         "Cloud platform engineering",
+        "Data integration and governance",
+        "E-commerce development",
+        "Point of sale software and implementation",
         "Digital growth"
       ],
       member: team.map((member) => ({

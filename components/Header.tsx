@@ -26,7 +26,7 @@ export function Header() {
 
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navItems.map((item) => (
-            <Link className={pathname === item.href ? "nav-link active" : "nav-link"} href={item.href} key={item.href}>
+            <Link className={pathname === item.href || pathname.startsWith(`${item.href}/`) ? "nav-link active" : "nav-link"} href={item.href} key={item.href}>
               {item.label}
             </Link>
           ))}

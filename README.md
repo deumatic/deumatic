@@ -8,7 +8,9 @@ The site presents Deumatic as one connected team across product strategy, experi
 
 The dedicated AI and ML Engineering page groups thirteen evidence-based capabilities across discovery, intelligent product development, deployment, optimization, evaluation and technical advisory.
 
-No location-specific positioning or unsupported business metrics are published. SupportOS is
+The Solutions hub groups complete outcomes for websites, commerce, digital products, automation, AI and data. Physical POS supply and on-site implementation are clearly limited to Saudi Arabia, while digitally delivered services remain internationally positioned.
+
+No unsupported business metrics or public numerical prices are published. SupportOS is
 presented as a working Deumatic MVP with real interface captures, while Camsort AI is presented as a
 team-built prototype with explicit context.
 
@@ -50,6 +52,8 @@ node scripts/visual-qa.mjs
 - `/`
 - `/services`
 - `/services/ai-ml-engineering`
+- `/solutions`
+- `/solutions/pos-saudi-arabia`
 - `/work`
 - `/about`
 - `/contact`
@@ -59,7 +63,11 @@ node scripts/visual-qa.mjs
 
 ## Contact workflow
 
-The form opens the visitor's email application with their entered project details. The site does not store form submissions or require a third-party form secret.
+Package and service selections are preserved in the enquiry flow. POS enquiries expose additional Saudi city, business type, branch, terminal and setup fields. The form opens the visitor's email application with their entered project details. The site does not claim a confirmed submission because no form backend is configured.
+
+## Commercial content policy
+
+Package and individual-service content is centralized in `data/commercial.ts`. Price objects use nullable amounts and an explicit publication-approval flag. Until the owner approves a USD price and its exact commercial scope, public pages display quotation labels rather than numerical amounts.
 
 ## Brand assets
 

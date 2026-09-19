@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import { enquiryPackageOptions, enquiryServiceGroups } from "@/data/commercial";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -8,7 +9,15 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" }
 };
 
-export default function ContactPage() {
+type ContactPageProps = {
+  searchParams: Promise<{ selection?: string | string[]; context?: string | string[] }>;
+};
+
+export default async function ContactPage({ searchParams }: ContactPageProps) {
+  const params = await searchParams;
+  const selection = Array.isArray(params.selection) ? params.selection[0] : params.selection;
+  const context = Array.isArray(params.context) ? params.context[0] : params.context;
+
   return (
     <>
       <section className="contact-hero container">
@@ -24,7 +33,12 @@ export default function ContactPage() {
         </aside>
       </section>
       <section className="contact-form-section container">
-        <ContactForm />
+        <ContactForm
+          initialSelection={selection}
+          initialContext={context}
+          packageOptions={enquiryPackageOptions}
+          serviceGroups={enquiryServiceGroups}
+        />
       </section>
     </>
   );

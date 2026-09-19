@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowIcon } from "@/components/Header";
 import { SectionHeading } from "@/components/SectionHeading";
+import { solutionCategories } from "@/data/commercial";
 import { engagementModels, faqs, process, services, team } from "@/data/site";
 
 export default function HomePage() {
@@ -58,6 +59,30 @@ export default function HomePage() {
             <h3>Built for the next release.</h3>
             <p>We make deliberate experience and architecture choices so the product can evolve without unnecessary rework.</p>
           </article>
+        </div>
+      </section>
+
+      <section className="section home-outcomes">
+        <div className="container">
+          <SectionHeading
+            kicker="Solutions"
+            title="What would you like to build or improve?"
+            intro="Choose a complete solution, get help with one part, or let us help you define the right starting point."
+          />
+          <div className="home-outcome-grid">
+            {solutionCategories.map((category) => (
+              <Link href={`/solutions?category=${category.id}#packages`} key={category.id}>
+                <span>{category.number}</span>
+                <h3>{category.title}</h3>
+                <p>{category.summary}</p>
+                <b>Explore solution <ArrowIcon /></b>
+              </Link>
+            ))}
+          </div>
+          <div className="home-outcome-footer">
+            <Link className="text-link" href="/services">Already know what you need? Browse individual services <ArrowIcon /></Link>
+            <Link className="text-link" href="/solutions#solution-guide">Not sure? Use the solution guide <ArrowIcon /></Link>
+          </div>
         </div>
       </section>
 
