@@ -11,7 +11,9 @@ export const site = {
 
 export const navItems = [
   { label: "Services", href: "/services" },
+  { label: "AI & ML", href: "/services/ai-ml-engineering" },
   { label: "Solutions", href: "/solutions" },
+  { label: "Saudi POS", href: "/solutions/pos-saudi-arabia" },
   { label: "Work", href: "/work" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" }

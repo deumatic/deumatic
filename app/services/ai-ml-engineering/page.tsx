@@ -68,7 +68,7 @@ const aiServicesSchema = {
 
 export default function AiMlEngineeringPage() {
   return (
-    <>
+    <div className="ai-page-v2">
       <section className="ai-page-hero dark-section">
         <div className="container ai-page-hero-grid">
           <div>
@@ -169,6 +169,6 @@ export default function AiMlEngineeringPage() {
       </section>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aiServicesSchema) }} />
-    </>
+    </div>
   );
 }

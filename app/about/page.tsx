@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="about-page-v2">
       <section className="page-hero container">
         <span className="section-kicker">About Deumatic</span>
         <h1>Technology is most valuable when the whole product makes sense.</h1>
@@ -67,6 +67,6 @@ export default function AboutPage() {
         <h2>Bring the ambition. We will help turn it into a focused build.</h2>
         <Link className="button" href="/contact">Start a conversation <ArrowIcon /></Link>
       </section>
-    </>
+    </div>
   );
 }

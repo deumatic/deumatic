@@ -19,7 +19,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
   const context = Array.isArray(params.context) ? params.context[0] : params.context;
 
   return (
-    <>
+    <div className="contact-page-v2">
       <section className="contact-hero container">
         <div>
           <span className="section-kicker">Start a project</span>
@@ -40,6 +40,6 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           serviceGroups={enquiryServiceGroups}
         />
       </section>
-    </>
+    </div>
   );
 }

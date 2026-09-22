@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Mono, Inter, Manrope } from "next/font/google";
+import { DM_Mono, Instrument_Sans } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { site, team } from "@/data/site";
 import "./globals.css";
 
-const manrope = Manrope({ subsets: ["latin"], variable: "--font-display", display: "swap" });
-const inter = Inter({ subsets: ["latin"], variable: "--font-body", display: "swap" });
-const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-mono", display: "swap" });
+const instrumentSans = Instrument_Sans({ subsets: ["latin"], variable: "--font-display", display: "swap" });
+const instrumentBody = Instrument_Sans({ subsets: ["latin"], variable: "--font-body", display: "swap" });
+const mono = DM_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#F5F2EA",
+  themeColor: "#FFFFFF",
   colorScheme: "light"
 };
 
@@ -154,7 +154,7 @@ const structuredData = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${inter.variable} ${mono.variable}`}>
+    <html lang="en" className={`${instrumentSans.variable} ${instrumentBody.variable} ${mono.variable}`}>
       <body>
         <a className="skip-link" href="#main-content">Skip to content</a>
         <Header />

@@ -59,14 +59,14 @@ export function ServiceCatalogue({ initialCategory = "design" }: { initialCatego
 
       {visibleServices.length ? (
         <div className="individual-service-grid">
-          {visibleServices.map((item) => {
+          {visibleServices.map((item, index) => {
             const relatedSolution = solutionPackages.find((solution) => solution.id === item.relatedSolutionId);
             const enquiryHref = `/contact?selection=${encodeURIComponent(item.title)}&context=${encodeURIComponent(`Interested in the ${item.title} service.`)}`;
             return (
               <article className="individual-service-card" id={`service-${item.id}`} key={item.id}>
                 <div className="individual-service-topline">
                   <span>{serviceCategories.find((category) => category.id === item.categoryId)?.title}</span>
-                  {item.geography === "Saudi Arabia" ? <strong>Saudi Arabia only</strong> : null}
+                  <div>{item.geography === "Saudi Arabia" ? <strong>Saudi Arabia only</strong> : null}<b>0{index + 1}</b></div>
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.summary}</p>
@@ -81,7 +81,7 @@ export function ServiceCatalogue({ initialCategory = "design" }: { initialCatego
                       Related: {relatedSolution.title}
                     </Link>
                   ) : null}
-                  <Link className="text-link" href={enquiryHref}>Request this service <ArrowIcon /></Link>
+                  <Link className="text-link service-request-v2" href={enquiryHref}><span>Request this service</span><i><ArrowIcon /></i></Link>
                 </div>
               </article>
             );

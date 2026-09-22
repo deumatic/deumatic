@@ -35,11 +35,21 @@ const workSchema = {
 
 export default function WorkPage() {
   return (
-    <>
-      <section className="page-hero container">
-        <span className="section-kicker">Selected work</span>
-        <h1>Work we can explain, demonstrate and stand behind.</h1>
-        <p>Our case studies focus on the problem, the system and the decisions behind the build. We do not publish invented outcomes or unsupported metrics.</p>
+    <div className="work-page-v2">
+      <section className="work-hero-v2 container">
+        <div className="work-hero-copy-v2">
+          <span className="v2-kicker">Selected work</span>
+          <h1>Work we can explain, demonstrate and <span>stand behind.</span></h1>
+          <p>Our case studies focus on the problem, the system and the decisions behind the build. We do not publish invented outcomes or unsupported metrics.</p>
+          <div className="work-hero-topics-v2" aria-label="Case study focus"><span>Problem</span><span>System</span><span>Decisions</span></div>
+        </div>
+        <div className="work-hero-preview-v2" aria-label="SupportOS case study preview">
+          <div className="work-hero-browser-v2">
+            <div className="work-hero-browser-bar-v2"><i /><i /><i /><span>SupportOS / Review workspace</span></div>
+            <Image src="/work/supportos/supportos-review-queue.png" alt="SupportOS review workspace" width={1440} height={1263} priority />
+          </div>
+          <div className="work-hero-case-label-v2"><span>Deumatic product / AI-assisted operations</span><strong>SupportOS</strong></div>
+        </div>
       </section>
 
       <section className="product-case container" id="supportos">
@@ -161,6 +171,6 @@ export default function WorkPage() {
         <Link className="button" href="/contact">Start a project <ArrowIcon /></Link>
       </section>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(workSchema) }} />
-    </>
+    </div>
   );
 }

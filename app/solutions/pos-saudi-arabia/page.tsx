@@ -32,7 +32,7 @@ const posSchema = {
 
 export default function SaudiPosPage() {
   return (
-    <>
+    <div className="pos-page-v2">
       <section className="pos-hero dark-section">
         <div className="container pos-hero-grid">
           <div>
@@ -137,6 +137,6 @@ export default function SaudiPosPage() {
       </section>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(posSchema) }} />
-    </>
+    </div>
   );
 }

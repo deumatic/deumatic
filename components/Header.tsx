@@ -26,15 +26,15 @@ export function Header() {
 
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navItems.map((item) => (
-            <Link className={pathname === item.href || pathname.startsWith(`${item.href}/`) ? "nav-link active" : "nav-link"} href={item.href} key={item.href}>
+            <Link className={pathname === item.href ? "nav-link active" : "nav-link"} href={item.href} key={item.href}>
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <Link className="button button-small header-cta" href="/contact">
-          Start a project
-          <ArrowIcon />
+        <Link className="header-cta-v2" href="/contact">
+          <span>Start a project</span>
+          <span className="v2-button-icon"><ArrowIcon /></span>
         </Link>
 
         <button
@@ -57,7 +57,7 @@ export function Header() {
             {item.label}
           </Link>
         ))}
-        <Link className="button" href="/contact" onClick={() => setOpen(false)}>Start a project <ArrowIcon /></Link>
+        <Link className="v2-primary-button mobile-nav-cta-v2" href="/contact" onClick={() => setOpen(false)}><span>Start a project</span><span className="v2-button-icon"><ArrowIcon /></span></Link>
       </nav>
     </header>
   );

@@ -5,12 +5,12 @@ import { ArrowIcon } from "@/components/Header";
 
 export function Footer() {
   return (
-    <footer className="site-footer">
+    <footer className="site-footer footer-v2">
       <div className="footer-top container">
         <div className="footer-intro">
-          <span className="section-kicker light">Have something worth building?</span>
-          <h2>Let&apos;s make the next decision count.</h2>
-          <Link className="button button-light" href="/contact">Start a project <ArrowIcon /></Link>
+          <span className="v2-kicker">Have something worth building?</span>
+          <h2>Let&apos;s make the <span>next decision count.</span></h2>
+          <Link className="v2-primary-button" href="/contact"><span>Start a project</span><span className="v2-button-icon"><ArrowIcon /></span></Link>
         </div>
         <div className="footer-links">
           <div>
@@ -19,7 +19,7 @@ export function Footer() {
           </div>
           <div>
             <p>Connect</p>
-            <a href={`mailto:${site.email}`}>{site.email}</a>
+            <a className="footer-email-v2" href={`mailto:${site.email}`}>{site.email}</a>
             <Link href="/about#team">Team on LinkedIn</Link>
           </div>
         </div>
@@ -27,7 +27,7 @@ export function Footer() {
       <div className="footer-bottom container">
         <Link className="brand-logo-frame footer-brand-logo" href="/" aria-label="Deumatic home">
           <Image
-            className="brand-logo-image brand-logo-image-light"
+            className="brand-logo-image"
             src="/brand/deumatic-logo.png"
             alt="Deumatic"
             fill
